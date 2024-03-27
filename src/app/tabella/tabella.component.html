@@ -1,0 +1,26 @@
+Quantità Dipendenti <input type="number" [(ngModel)]="size" min="1" max="1000" (change)="getRequest()">
+
+<table>
+    <tr>
+        <td class="title">Nome</td>
+        <td class="title">Cognome</td>
+        <td class="title">Data di Nascita</td>
+        <td class="title">Sesso</td>
+        <td class="title">Data di Assunzione</td>
+    </tr>
+    <tr *ngFor="let employee of employees">
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.birthDate}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.hireDate}}</td>
+    </tr>
+</table>
+
+<div>
+    <button class="nav" (click)="changePage(1)" [disabled]="page == 1">&lt;&lt;</button>
+    <button class="nav mid" (click)="changePage(page - 1)" [disabled]="page == 1">&lt;</button>
+    <button class="nav mid invis" disabled>{{page}}/{{totpages}}</button>
+    <button class="nav mid" (click)="changePage(page + 1)" [disabled]="page == totpages">&gt;</button>
+    <button class="nav" (click)="changePage(totpages)" [disabled]="page == totpages">&gt;&gt;</button>
+</div>

@@ -1,0 +1,36 @@
+td {
+    border: 1px solid black
+}
+
+.title {
+
+    background-color: #aaa;
+}
+
+tr:nth-child(2n - 1) {
+
+    background-color: gainsboro;
+}
+
+table {
+
+    width: 58%;
+}
+
+.nav {
+
+    width: 11%;
+    margin-top: 5px;
+}
+
+.mid {
+
+    margin: 0.5%;
+}
+
+.invis {
+
+    background-color: white;
+    border-width: 0;
+    color: black;
+}
